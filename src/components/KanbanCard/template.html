@@ -1,7 +1,13 @@
-<div class="KanbanCard__wrapper" :style="{'background': color}">
-    {{ data.title }}
-    <i class="fa fa-trash" v-if="first"></i>
-    <i class="fa fa-arrow-left" v-if="!first"></i>
-    <i class="fa fa-arrow-right" v-if="!last"></i>
-    {{ data.deadline }}
+<div class="KanbanCard__wrapper flex-column" :style="{'background': color}">
+    <div class="KanbanCard-icon__wrapper">
+        <i class="fa fa-trash KanbanCard-icon__wrapper-center flex" v-if="first"></i>
+        <i class="fa fa-arrow-left KanbanCard-icon__wrapper-left flex" v-if="!first"></i>
+        <i class="fa fa-arrow-right KanbanCard-icon__wrapper-right flex" v-if="!last"></i>
+    </div>
+    <div class="KanbanCard-title__wrapper">
+        {{ data.title }}
+    </div>
+    <div class="KanbanCard-deadline__wrapper flex">
+        {{ data.deadline }}
+    </div>
 </div>

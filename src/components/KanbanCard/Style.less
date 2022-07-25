@@ -1,0 +1,33 @@
+.KanbanCard {
+  &__wrapper {
+    padding: 10px;
+    width: 100%;
+  }
+  &-icon__wrapper {
+    border-bottom: 1px solid black;
+    width: 100%;
+    justify-content: stretch;
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+  }
+  &-icon__wrapper-center {
+    grid-column-start: 2;
+    justify-content: center;
+    text-align: center;
+  }
+  &-icon__wrapper-left {
+    width: 20px;
+    grid-column-start: 1;
+  }
+  &-icon__wrapper-right {
+    grid-column-start: 3;
+  }
+  &-title__wrapper {
+    border-bottom: 1px solid black;
+    padding: 5px;
+  }
+  &-deadline__wrapper {
+    padding: 5px;
+    justify-content: center;
+  }
+}
