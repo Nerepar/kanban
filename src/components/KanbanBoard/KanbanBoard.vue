@@ -12,7 +12,10 @@
         methods: {
             addButtonClick() {
                 this.$emit('addButtonClick');
-            }
+            },
+            notifyHandler(eventName, taskId) {
+                this.$emit(eventName, taskId, this.elementIndex);
+            },
         }
     }
 </script>

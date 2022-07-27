@@ -7,9 +7,13 @@
             :firstBoard="!index"
             v-for="(item, index) in boards"
             @addButtonClick="addButtonClick"
+            @deleteTask="deleteTask"
+            @moveNextBoard="moveNextBoard"
+            @movePrevBoard="movePrevBoard"
     />
     <KanbanAddForm
             v-if="addFormVisible"
+            :indexTask="indexTask"
             @addTask="addTask"
             @close="closeCard"
     />
